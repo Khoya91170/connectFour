@@ -1,0 +1,10 @@
+#ifndef COLOR_INCLUDED
+#define COLOR_INCLUDED
+
+     enum Color: unsigned char
+    {
+        Yellow = 0,
+        Red
+    };
+
+#endif // COLOR_INCLUDED
