@@ -19,12 +19,14 @@ class Game
     private:
         Color J1;
         Color J2;
+        std::string winner;
 
         std::array<std::array<Disc, nbCols>, nbRows> grid;
         void initGrid();
         bool are2Players;
         void launchGameOnePlayer();
         void launchGameTwoPlayers();
+        void displayGrid();
 };
 
 #endif // GAME_H
