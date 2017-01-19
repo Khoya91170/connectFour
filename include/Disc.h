@@ -18,6 +18,6 @@ class Disc
 
     private:
         Color color;
-};l
+};
 
 #endif // DISC_H

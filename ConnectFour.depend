@@ -27,3 +27,26 @@
 	"Disc.h"
 	<array>
 
+1484835674 source:/home/khoya/Documents/connectFour/main.cpp
+	<iostream>
+	"Game.h"
+	<string>
+
+1484835646 /home/khoya/Documents/connectFour/include/Game.h
+	"Disc.h"
+	<array>
+
+1484835167 /home/khoya/Documents/connectFour/include/Disc.h
+	"Color.h"
+	<iostream>
+
+1484835043 /home/khoya/Documents/connectFour/include/Color.h
+
+1484835043 source:/home/khoya/Documents/connectFour/src/Disc.cpp
+	"Disc.h"
+
+1484835743 source:/home/khoya/Documents/connectFour/src/Game.cpp
+	"Game.h"
+	<iostream>
+	<string>
+

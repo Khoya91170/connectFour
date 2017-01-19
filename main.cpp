@@ -6,7 +6,6 @@
 int main()
 {
     Game g = Game(true);
-    g.displayMess();
    // cout << "Hello world!" << endl;
 //    to_string
 

@@ -12,7 +12,6 @@ class Game
     public:
         Game(bool aIs2Players);
         virtual ~Game();
-        void displayMess();
 
     protected:
 
