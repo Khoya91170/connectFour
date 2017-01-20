@@ -26,6 +26,7 @@ class Game
         void launchGameOnePlayer();
         void launchGameTwoPlayers();
         void displayGrid();
+        bool updateGrid(int aColumn, Color aPlayer);
 };
 
 #endif // GAME_H

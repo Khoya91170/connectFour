@@ -71,10 +71,40 @@ void Game::launchGameTwoPlayers()
         J1 = Yellow;
         J2 = Red;
     }
+    displayGrid();
     std::cout <<  std::endl;
     std::cout << "Choisissez une colonne : " << std::endl;
     std::cin >> columnToPlay;
 
+    while(columnToPlay < 1 || columnToPlay > 7)
+    {
+        std::cout <<  std::endl;
+        std::cout << "Colonne incorrecte" << std::endl;
+        std::cout << "Choisissez une colonne : " << std::endl;
+        std::cin >> columnToPlay;
+    }
+    updateGrid(columnToPlay-1, J1);
+    displayGrid();
+
+    updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
+    displayGrid();
+
+        updateGrid(1, J1);
     displayGrid();
     while(winner == "NULL")
     {
@@ -94,9 +124,48 @@ void Game::displayGrid()
     {
         for(int j=0; j<nbCols; j++)
         {
-            std::cout << "[ " << grid[i][j] << " ]";
+            std::cout << grid[i][j] ;
         }
         std::cout <<  std::endl;
+    }
+    std::cout << std::endl;
+}
+
+bool Game::updateGrid(int aColumn, Color aPlayer)
+{
+    //const int nbRows = 6;
+    //const int nbCols = 7;
+
+    bool isEmpty = true;
+    int cpt = 0;
+    while(isEmpty && cpt<nbRows)
+    {
+        if(grid[cpt][aColumn].getColor() != None)
+        {
+            isEmpty = false;
+        }
+        cpt++;
+    }
+    // If cpt = 1 the entire column is full
+    if(cpt == 1)
+    {
+        return false;
+    }
+    else
+    {
+        Disc d = Disc(aPlayer);
+        grid[cpt-1][aColumn] = d;
+
+        for(int i=0; i<nbRows; i++)
+        {
+            for(int j=0; j<nbCols; j++)
+            {
+                std::cout << "[ " << grid[i][j].getColor() << " ]";
+            }
+            std::cout <<  std::endl;
+        }
+        std::cout <<  std::endl;
+        return true;
     }
 }
 
